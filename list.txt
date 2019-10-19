@@ -1,7 +1,0 @@
-www
-mail
-proxy
-admin
-router
-owa
-ftp
