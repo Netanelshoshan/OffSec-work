@@ -1,0 +1,34 @@
+# Nmap 7.70 scan initiated Sat Aug 17 10:51:04 2019 as: nmap -p- -oA nmap/AllPorts 10.11.1.220
+Nmap scan report for 10.11.1.220
+Host is up (0.025s latency).
+Not shown: 65510 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+53/tcp    open  domain
+88/tcp    open  kerberos-sec
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+389/tcp   open  ldap
+445/tcp   open  microsoft-ds
+464/tcp   open  kpasswd5
+593/tcp   open  http-rpc-epmap
+636/tcp   open  ldapssl
+3268/tcp  open  globalcatLDAP
+3269/tcp  open  globalcatLDAPssl
+3389/tcp  open  ms-wbt-server
+5722/tcp  open  msdfsr
+9389/tcp  open  adws
+47001/tcp open  winrm
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49157/tcp open  unknown
+49158/tcp open  unknown
+49165/tcp open  unknown
+49171/tcp open  unknown
+49182/tcp open  unknown
+MAC Address: 00:50:56:B8:49:14 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Sat Aug 17 10:51:36 2019 -- 1 IP address (1 host up) scanned in 32.47 seconds

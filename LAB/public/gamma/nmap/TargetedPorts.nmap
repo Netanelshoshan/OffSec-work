@@ -1,0 +1,73 @@
+# Nmap 7.70 scan initiated Wed Aug 14 08:29:31 2019 as: nmap -sC -sV -p 135,139,445,1100,3306,3389,5357,5800,5900,8080,49152,49153,49154,49155,49156,49157,49159 -oA nmap/TargetedPorts 10.11.1.73
+Nmap scan report for 10.11.1.73
+Host is up (0.015s latency).
+
+PORT      STATE SERVICE      VERSION
+135/tcp   open  msrpc        Microsoft Windows RPC
+139/tcp   open  netbios-ssn  Microsoft Windows netbios-ssn
+445/tcp   open  microsoft-ds Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+1100/tcp  open  java-rmi     Java RMI Registry
+| rmi-dumpregistry: 
+|   creamtec/ajaxswing/JVMFactory
+|     com.creamtec.ajaxswing.core.JVMFactory_Stub
+|     @10.11.1.73:49157
+|     extends
+|       java.rmi.server.RemoteStub
+|       extends
+|_        java.rmi.server.RemoteObject
+3306/tcp  open  mysql        MySQL (unauthorized; French)
+3389/tcp  open  tcpwrapped
+|_ssl-date: 2019-08-14T05:20:06+00:00; -10m26s from scanner time.
+5357/tcp  open  http         Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+5800/tcp  open  vnc-http     TightVNC (user: gamma; VNC TCP port: 5900)
+|_http-title: TightVNC desktop [gamma]
+5900/tcp  open  vnc          VNC (protocol 3.8)
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     VNC Authentication (2)
+|     Tight (16)
+|   Tight auth subtypes: 
+|_    STDV VNCAUTH_ (2)
+8080/tcp  open  http         Apache httpd 2.4.9 ((Win32) PHP/5.5.12)
+|_http-open-proxy: Proxy might be redirecting requests
+| http-robots.txt: 1 disallowed entry 
+|_/testmysql.php
+|_http-server-header: Apache/2.4.9 (Win32) PHP/5.5.12
+|_http-title: Site doesn't have a title (text/html).
+49152/tcp open  msrpc        Microsoft Windows RPC
+49153/tcp open  msrpc        Microsoft Windows RPC
+49154/tcp open  msrpc        Microsoft Windows RPC
+49155/tcp open  msrpc        Microsoft Windows RPC
+49156/tcp open  msrpc        Microsoft Windows RPC
+49157/tcp open  rmiregistry  Java RMI
+49159/tcp open  rmiregistry  Java RMI
+MAC Address: 00:50:56:B8:2D:FB (VMware)
+Service Info: Host: GAMMA; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 1h34m33s, deviation: 3h30m00s, median: -10m26s
+|_nbstat: NetBIOS name: GAMMA, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b8:2d:fb (VMware)
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: gamma
+|   NetBIOS computer name: GAMMA\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-08-13T22:20:06-07:00
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-08-14 08:20:06
+|_  start_date: 2018-10-23 05:15:55
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 14 08:31:33 2019 -- 1 IP address (1 host up) scanned in 121.87 seconds

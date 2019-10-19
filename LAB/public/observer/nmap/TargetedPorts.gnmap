@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Aug 18 19:27:47 2019 as: nmap -p135,139,445 --script vuln -oA nmap/TargetedPorts 10.11.1.218
+Host: 10.11.1.218 (observer.thinc.local)	Status: Up
+Host: 10.11.1.218 (observer.thinc.local)	Ports: 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///
+# Nmap done at Sun Aug 18 19:28:27 2019 -- 1 IP address (1 host up) scanned in 39.73 seconds

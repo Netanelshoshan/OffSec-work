@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Aug 14 08:29:31 2019 as: nmap -sC -sV -p 135,139,445,1100,3306,3389,5357,5800,5900,8080,49152,49153,49154,49155,49156,49157,49159 -oA nmap/TargetedPorts 10.11.1.73 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p 135,139,445,1100,3306,3389,5357,5800,5900,8080,49152,49153,49154,49155,49156,49157,49159 -oA nmap/TargetedPorts 10.11.1.73" start="1565760571" startstr="Wed Aug 14 08:29:31 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="17" services="135,139,445,1100,3306,3389,5357,5800,5900,8080,49152-49157,49159"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1565760571" endtime="1565760693"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.73" addrtype="ipv4"/>
+<address addr="00:50:56:B8:2D:FB" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" product="Microsoft Windows netbios-ssn" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" product="Windows 7 Professional 7601 Service Pack 1 microsoft-ds" extrainfo="workgroup: WORKGROUP" hostname="GAMMA" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="1100"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="java-rmi" product="Java RMI Registry" method="probed" conf="10"/><script id="rmi-dumpregistry" output="&#xa;  creamtec/ajaxswing/JVMFactory&#xa;    com.creamtec.ajaxswing.core.JVMFactory_Stub&#xa;    @10.11.1.73:49157&#xa;    extends&#xa;      java.rmi.server.RemoteStub&#xa;      extends&#xa;        java.rmi.server.RemoteObject&#xa;"/></port>
+<port protocol="tcp" portid="3306"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="mysql" product="MySQL" extrainfo="unauthorized; French" method="probed" conf="10"><cpe>cpe:/a:mysql:mysql::::fr</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="tcpwrapped" method="probed" conf="8"/><script id="ssl-date" output="2019-08-14T05:20:06+00:00; -10m26s from scanner time."><elem key="date">2019-08-14T05:20:06+00:00</elem>
+<elem key="delta">-626.0</elem>
+</script></port>
+<port protocol="tcp" portid="5357"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft HTTPAPI httpd" version="2.0" extrainfo="SSDP/UPnP" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="http-server-header" output="Microsoft-HTTPAPI/2.0"><elem>Microsoft-HTTPAPI/2.0</elem>
+</script><script id="http-title" output="Service Unavailable"><elem key="title">Service Unavailable</elem>
+</script></port>
+<port protocol="tcp" portid="5800"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="vnc-http" product="TightVNC" extrainfo="user: gamma; VNC TCP port: 5900" method="probed" conf="10"><cpe>cpe:/a:tightvnc:tightvnc</cpe></service><script id="http-title" output="TightVNC desktop [gamma]"><elem key="title">TightVNC desktop [gamma]</elem>
+</script></port>
+<port protocol="tcp" portid="5900"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="vnc" product="VNC" extrainfo="protocol 3.8" method="probed" conf="10"/><script id="vnc-info" output="&#xa;  Protocol version: 3.8&#xa;  Security types: &#xa;    VNC Authentication (2)&#xa;    Tight (16)&#xa;  Tight auth subtypes: &#xa;    STDV VNCAUTH_ (2)"><elem key="Protocol version">3.8</elem>
+<table key="Security types">
+<table>
+<elem key="type">2</elem>
+<elem key="name">VNC Authentication</elem>
+</table>
+<table>
+<elem key="type">16</elem>
+<elem key="name">Tight</elem>
+</table>
+</table>
+<table key="Tight auth subtypes">
+<table>
+<elem key="code">2</elem>
+<elem key="vendor">STDV</elem>
+<elem key="signature">VNCAUTH_</elem>
+</table>
+</table>
+</script></port>
+<port protocol="tcp" portid="8080"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Apache httpd" version="2.4.9" extrainfo="(Win32) PHP/5.5.12" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.4.9</cpe></service><script id="http-open-proxy" output="Proxy might be redirecting requests"/><script id="http-robots.txt" output="1 disallowed entry &#xa;/testmysql.php"/><script id="http-server-header" output="Apache/2.4.9 (Win32) PHP/5.5.12"><elem>Apache/2.4.9 (Win32) PHP/5.5.12</elem>
+</script><script id="http-title" output="Site doesn&apos;t have a title (text/html)."></script></port>
+<port protocol="tcp" portid="49152"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49153"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49154"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49155"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49156"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" product="Microsoft Windows RPC" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="49157"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="rmiregistry" product="Java RMI" method="probed" conf="10"/></port>
+<port protocol="tcp" portid="49159"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="rmiregistry" product="Java RMI" method="probed" conf="10"/></port>
+</ports>
+<hostscript><script id="clock-skew" output="mean: 1h34m33s, deviation: 3h30m00s, median: -10m26s"><elem key="mean">5673</elem>
+<elem key="median">-626</elem>
+<elem key="stddev">12600</elem>
+</script><script id="nbstat" output="NetBIOS name: GAMMA, NetBIOS user: &lt;unknown&gt;, NetBIOS MAC: 00:50:56:b8:2d:fb (VMware)"><table key="mac">
+<elem key="manuf">VMware</elem>
+<elem key="address">00:50:56:b8:2d:fb</elem>
+</table>
+<table key="statistics">
+<elem>00 50 56 b8 2d fb 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+<elem>00 00 00 00 00 00 00 00 00 00 00 00 00 00</elem>
+</table>
+<table key="names">
+<table>
+<elem key="name">GAMMA</elem>
+<elem key="suffix">0</elem>
+<elem key="flags">1024</elem>
+</table>
+<table>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">0</elem>
+<elem key="flags">33792</elem>
+</table>
+<table>
+<elem key="name">GAMMA</elem>
+<elem key="suffix">32</elem>
+<elem key="flags">1024</elem>
+</table>
+<table>
+<elem key="name">WORKGROUP</elem>
+<elem key="suffix">30</elem>
+<elem key="flags">33792</elem>
+</table>
+</table>
+<elem key="user">&lt;unknown&gt;</elem>
+<elem key="server_name">GAMMA</elem>
+</script><script id="smb-os-discovery" output="&#xa;  OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)&#xa;  OS CPE: cpe:/o:microsoft:windows_7::sp1:professional&#xa;  Computer name: gamma&#xa;  NetBIOS computer name: GAMMA\x00&#xa;  Workgroup: WORKGROUP\x00&#xa;  System time: 2019-08-13T22:20:06-07:00&#xa;"><elem key="os">Windows 7 Professional 7601 Service Pack 1</elem>
+<elem key="lanmanager">Windows 7 Professional 6.1</elem>
+<elem key="server">GAMMA\x00</elem>
+<elem key="date">2019-08-13T22:20:06-07:00</elem>
+<elem key="fqdn">gamma</elem>
+<elem key="domain_dns">gamma</elem>
+<elem key="workgroup">WORKGROUP\x00</elem>
+<elem key="cpe">cpe:/o:microsoft:windows_7::sp1:professional</elem>
+</script><script id="smb-security-mode" output="&#xa;  account_used: &lt;blank&gt;&#xa;  authentication_level: user&#xa;  challenge_response: supported&#xa;  message_signing: disabled (dangerous, but default)"><elem key="account_used">&lt;blank&gt;</elem>
+<elem key="authentication_level">user</elem>
+<elem key="challenge_response">supported</elem>
+<elem key="message_signing">disabled</elem>
+</script><script id="smb2-security-mode" output="&#xa;  2.02: &#xa;    Message signing enabled but not required"><table key="2.02">
+<elem>Message signing enabled but not required</elem>
+</table>
+</script><script id="smb2-time" output="&#xa;  date: 2019-08-14 08:20:06&#xa;  start_date: 2018-10-23 05:15:55"><elem key="date">2019-08-14 08:20:06</elem>
+<elem key="start_date">2018-10-23 05:15:55</elem>
+</script></hostscript><times srtt="15280" rttvar="1473" to="100000"/>
+</host>
+<runstats><finished time="1565760693" timestr="Wed Aug 14 08:31:33 2019" elapsed="121.87" summary="Nmap done at Wed Aug 14 08:31:33 2019; 1 IP address (1 host up) scanned in 121.87 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

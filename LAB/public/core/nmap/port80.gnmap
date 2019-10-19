@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Wed Aug 21 18:59:23 2019 as: nmap -sC -sV -p80 --script vuln -oA nmap/port80 10.11.1.234
+Host: 10.11.1.234 (core.thinc.local)	Status: Up
+Host: 10.11.1.234 (core.thinc.local)	Ports: 80/open/tcp//http//Apache httpd 2.2.14 ((Ubuntu))/
+# Nmap done at Wed Aug 21 19:00:48 2019 -- 1 IP address (1 host up) scanned in 85.15 seconds

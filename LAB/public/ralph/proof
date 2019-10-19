@@ -1,0 +1,9 @@
+# Ralph.thinc.local 10.11.1.31 by Netanel Shoshan.
+- Initial scan revealed ports 80,135,139,445,1925,1433,3389.
+- Scanning for vulns showed me that the host was vulnerable to MS17-10.
+- I've tried not to use the msf option but after one day of researching, I decided to continue the research later.
+- Got super duper cool exploit and she's ready to be fired up on Windows server 2008/7/8 and up :)
+- Didn't need any moves to get privesc because the exploit gave my straight system privilages. 
+- So.. that's it.. cool! bye ..
+
+hash = 26b4cb0930a3e3be4da8e9d738607427

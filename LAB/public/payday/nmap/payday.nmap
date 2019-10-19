@@ -1,0 +1,78 @@
+# Nmap 7.80 scan initiated Fri Aug 30 22:01:36 2019 as: nmap -sC -sV -oA nmap/payday 10.11.1.24
+Nmap scan report for 10.11.1.24
+Host is up (0.018s latency).
+Not shown: 992 closed ports
+PORT    STATE SERVICE     VERSION
+22/tcp  open  ssh         OpenSSH 4.6p1 Debian 5build1 (protocol 2.0)
+| ssh-hostkey: 
+|   1024 f3:6e:87:04:ea:2d:b3:60:ff:42:ad:26:67:17:94:d5 (DSA)
+|_  2048 bb:03:ce:ed:13:f1:9a:9e:36:03:e2:af:ca:b2:35:04 (RSA)
+80/tcp  open  http        Apache httpd 2.2.4 ((Ubuntu) PHP/5.2.3-1ubuntu6)
+|_http-server-header: Apache/2.2.4 (Ubuntu) PHP/5.2.3-1ubuntu6
+|_http-title: CS-Cart. Powerful PHP shopping cart software
+110/tcp open  pop3        Dovecot pop3d
+|_pop3-capabilities: UIDL PIPELINING STLS CAPA RESP-CODES SASL TOP
+|_ssl-date: 2019-08-30T18:57:10+00:00; -4m54s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+139/tcp open  netbios-ssn Samba smbd 3.X - 4.X (workgroup: MSHOME)
+143/tcp open  imap        Dovecot imapd
+|_imap-capabilities: SORT LITERAL+ IDLE LOGIN-REFERRALS Capability OK UNSELECT NAMESPACE IMAP4rev1 STARTTLS completed CHILDREN THREAD=REFERENCES MULTIAPPEND SASL-IR LOGINDISABLEDA0001
+|_ssl-date: 2019-08-30T18:57:11+00:00; -4m53s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+445/tcp open  netbios-ssn Samba smbd 3.0.26a (workgroup: MSHOME)
+993/tcp open  ssl/imaps?
+|_ssl-date: 2019-08-30T18:57:10+00:00; -4m54s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+995/tcp open  ssl/pop3s?
+|_ssl-date: 2019-08-30T18:57:10+00:00; -4m54s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC4_128_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+MAC Address: 00:50:56:B8:90:39 (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: 35m06s, deviation: 1h37m59s, median: -4m54s
+|_nbstat: NetBIOS name: PAYDAY, NetBIOS user: <unknown>, NetBIOS MAC: <unknown> (unknown)
+| smb-os-discovery: 
+|   OS: Unix (Samba 3.0.26a)
+|   Computer name: payday
+|   NetBIOS computer name: 
+|   Domain name: 
+|   FQDN: payday
+|_  System time: 2019-08-30T14:56:59-04:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+|_smb2-time: Protocol negotiation failed (SMB2)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Fri Aug 30 22:04:18 2019 -- 1 IP address (1 host up) scanned in 162.30 seconds

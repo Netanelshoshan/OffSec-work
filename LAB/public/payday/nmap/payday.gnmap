@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Fri Aug 30 22:01:36 2019 as: nmap -sC -sV -oA nmap/payday 10.11.1.24
+Host: 10.11.1.24 ()	Status: Up
+Host: 10.11.1.24 ()	Ports: 22/open/tcp//ssh//OpenSSH 4.6p1 Debian 5build1 (protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.2.4 ((Ubuntu) PHP|5.2.3-1ubuntu6)/, 110/open/tcp//pop3//Dovecot pop3d/, 139/open/tcp//netbios-ssn//Samba smbd 3.X - 4.X (workgroup: MSHOME)/, 143/open/tcp//imap//Dovecot imapd/, 445/open/tcp//netbios-ssn//Samba smbd 3.0.26a (workgroup: MSHOME)/, 993/open/tcp//ssl|imaps?///, 995/open/tcp//ssl|pop3s?///	Ignored State: closed (992)
+# Nmap done at Fri Aug 30 22:04:18 2019 -- 1 IP address (1 host up) scanned in 162.30 seconds

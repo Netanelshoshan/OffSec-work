@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Thu Aug 29 00:00:19 2019 as: nmap -sC -sV -oA nmap/bob2 10.11.1.14
+Host: 10.11.1.14 ()	Status: Up
+Host: 10.11.1.14 ()	Ports: 21/open/tcp//ftp//Microsoft ftpd/, 80/open/tcp//http//Microsoft IIS httpd 5.1/, 3389/open/tcp//tcpwrapped///	Ignored State: filtered (997)
+# Nmap done at Thu Aug 29 00:00:38 2019 -- 1 IP address (1 host up) scanned in 19.14 seconds

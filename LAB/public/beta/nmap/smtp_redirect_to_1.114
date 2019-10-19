@@ -1,0 +1,2 @@
+# Nmap 7.70 scan initiated Mon Aug 12 14:49:53 2019 as: nmap -sC -sV -oG nmap/smtp_redirect_to_1.114 10.11.1.114
+# Nmap done at Mon Aug 12 14:49:54 2019 -- 1 IP address (0 hosts up) scanned in 0.83 seconds

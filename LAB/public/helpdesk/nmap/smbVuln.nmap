@@ -1,0 +1,29 @@
+# Nmap 7.70 scan initiated Sat Aug 17 15:17:18 2019 as: nmap -p139,445 --script smb-enum* -oA nmap/smbVuln 10.11.1.145
+Nmap scan report for helpdesk.thinc.local (10.11.1.145)
+Host is up (0.017s latency).
+
+PORT    STATE SERVICE
+139/tcp open  netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+445/tcp open  microsoft-ds
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+MAC Address: 00:50:56:B8:70:7D (VMware)
+
+Host script results:
+| smb-enum-shares: 
+|   note: ERROR: Enumerating shares failed, guessing at common ones (NT_STATUS_ACCESS_DENIED)
+|   account_used: <blank>
+|   \\10.11.1.145\ADMIN$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: <none>
+|   \\10.11.1.145\C$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: <none>
+|   \\10.11.1.145\IPC$: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|     Anonymous access: READ
+|   \\10.11.1.145\PUBLIC: 
+|     warning: Couldn't get details for share: NT_STATUS_ACCESS_DENIED
+|_    Anonymous access: <none>
+
+# Nmap done at Sat Aug 17 15:17:35 2019 -- 1 IP address (1 host up) scanned in 16.20 seconds

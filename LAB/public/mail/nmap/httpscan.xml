@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Thu Aug 22 17:07:02 2019 as: nmap -v -p 80 -&#45;script vuln -oA nmap/httpscan 10.11.1.229 -->
+<nmaprun scanner="nmap" args="nmap -v -p 80 -&#45;script vuln -oA nmap/httpscan 10.11.1.229" start="1566482822" startstr="Thu Aug 22 17:07:02 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="1"/>
+<debugging level="0"/>
+<taskbegin task="NSE" time="1566482822"/>
+<taskprogress task="NSE" time="1566482853" percent="50.00" remaining="32" etc="1566482884"/>
+<taskend task="NSE" time="1566482856"/>
+<taskbegin task="NSE" time="1566482856"/>
+<taskend task="NSE" time="1566482856"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><taskbegin task="ARP Ping Scan" time="1566482856"/>
+<taskend task="ARP Ping Scan" time="1566482856" extrainfo="1 total hosts"/>
+<taskbegin task="Parallel DNS resolution of 1 host." time="1566482856"/>
+<taskend task="Parallel DNS resolution of 1 host." time="1566482856"/>
+<taskbegin task="SYN Stealth Scan" time="1566482856"/>
+<taskend task="SYN Stealth Scan" time="1566482856" extrainfo="1 total ports"/>
+<taskbegin task="NSE" time="1566482856"/>
+<taskend task="NSE" time="1566483006"/>
+<taskbegin task="NSE" time="1566483006"/>
+<taskend task="NSE" time="1566483006"/>
+<host starttime="1566482856" endtime="1566483006"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.229" addrtype="ipv4"/>
+<address addr="00:50:56:B8:8D:74" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" method="table" conf="3"/><script id="http-csrf" output="Couldn&apos;t find any CSRF vulnerabilities."/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /_vti_log/: Frontpage file or folder&#xa;  /_vti_pvt/access.cnf: Frontpage file or folder&#xa;  /_vti_pvt/bots.cnf: Frontpage file or folder&#xa;  /_vti_pvt/botinfs.cnf: Frontpage file or folder&#xa;  /_vti_pvt/service.cnf: Frontpage file or folder&#xa;  /_vti_pvt/services.cnf: Frontpage file or folder&#xa;  /_vti_pvt/svcacl.cnf: Frontpage file or folder&#xa;  /_vti_pvt/writeto.cnf: Frontpage file or folder&#xa;  /images/: Potentially interesting folder&#xa;  /_private/: Potentially interesting folder&#xa;"/><script id="http-iis-webdav-vuln" output="WebDAV is ENABLED. No protected folder found; check not run. If you know a protected folder, add -&#45;script-args=webdavfolder=&lt;path&gt;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/></port>
+</ports>
+<times srtt="13024" rttvar="10130" to="100000"/>
+</host>
+<taskbegin task="NSE" time="1566483006"/>
+<taskend task="NSE" time="1566483006"/>
+<taskbegin task="NSE" time="1566483006"/>
+<taskend task="NSE" time="1566483006"/>
+<runstats><finished time="1566483006" timestr="Thu Aug 22 17:10:06 2019" elapsed="184.46" summary="Nmap done at Thu Aug 22 17:10:06 2019; 1 IP address (1 host up) scanned in 184.46 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

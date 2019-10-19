@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sun Aug 18 19:20:30 2019 as: nmap -sC -sV -oA nmap/observer 10.11.1.218
+Host: 10.11.1.218 (observer.thinc.local)	Status: Up
+Host: 10.11.1.218 (observer.thinc.local)	Ports: 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: THINC)/	Ignored State: filtered (997)
+# Nmap done at Sun Aug 18 19:21:22 2019 -- 1 IP address (1 host up) scanned in 51.61 seconds

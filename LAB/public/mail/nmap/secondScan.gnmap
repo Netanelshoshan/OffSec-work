@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Thu Aug 22 17:00:28 2019 as: nmap -sC -sV -oA nmap/secondScan 10.11.1.229
+Host: 10.11.1.229 ()	Status: Up
+Host: 10.11.1.229 ()	Ports: 21/open/tcp//tcpwrapped///, 23/closed/tcp//telnet///, 25/open/tcp//smtp//hMailServer smtpd/, 80/open/tcp//http//Microsoft IIS httpd 6.0/, 110/open/tcp//pop3//hMailServer pop3d/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Windows Server 2003 3790 Service Pack 1 netbios-ssn/, 143/open/tcp//imap//hMailServer imapd/, 443/closed/tcp//https///, 1025/open/tcp//msrpc//Microsoft Windows RPC/, 2869/closed/tcp//icslap///, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Service/	Ignored State: filtered (988)
+# Nmap done at Thu Aug 22 17:04:58 2019 -- 1 IP address (1 host up) scanned in 269.80 seconds

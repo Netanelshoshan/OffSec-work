@@ -1,0 +1,16 @@
+# Nmap 7.70 scan initiated Thu Aug 22 18:32:30 2019 as: nmap -p 21,23,25,80,110,135,139,143,443,1025,2869,3389 -sV --script=vuln -oG nmap/TargetedPorts.nmap 10.11.1.229
+Host: 10.11.1.229 (mail.thinc.local)	Status: Up
+Host: 10.11.1.229 (mail.thinc.local)	
+Ports: 21/open/tcp//tcpwrapped///, 
+23/closed/tcp//telnet///, 
+25/open/tcp//smtp//hMailServer smtpd/, 
+80/open/tcp//http//Microsoft IIS httpd 6.0/, 
+110/open/tcp//pop3//hMailServer pop3d/, 
+135/open/tcp//msrpc//Microsoft Windows RPC/, 
+139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 
+143/open/tcp//imap//hMailServer imapd/, 
+443/closed/tcp//https///, 
+1025/open/tcp//msrpc//Microsoft Windows RPC/, 
+2869/closed/tcp//icslap///, 
+3389/open/tcp//ms-wbt-server//Microsoft Terminal Service/
+# Nmap done at Thu Aug 22 18:35:41 2019 -- 1 IP address (1 host up) scanned in 191.08 seconds

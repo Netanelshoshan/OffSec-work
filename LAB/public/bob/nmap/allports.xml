@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Wed Aug 28 23:49:33 2019 as: nmap -sV -p 1-65535 -oA nmap/allports 10.11.1.13 -->
+<nmaprun scanner="nmap" args="nmap -sV -p 1-65535 -oA nmap/allports 10.11.1.13" start="1567025373" startstr="Wed Aug 28 23:49:33 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="65535" services="1-65535"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<host starttime="1567025374" endtime="1567025485"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.13" addrtype="ipv4"/>
+<address addr="00:50:56:B8:E9:2E" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><extraports state="filtered" count="65531">
+<extrareasons reason="no-responses" count="65531"/>
+</extraports>
+<port protocol="tcp" portid="21"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ftp" product="Microsoft ftpd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:ftp_service</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" product="Microsoft IIS httpd" version="5.1" ostype="Windows" method="probed" conf="10"><cpe>cpe:/a:microsoft:iis:5.1</cpe><cpe>cpe:/o:microsoft:windows</cpe></service></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="tcpwrapped" method="probed" conf="8"/></port>
+<port protocol="tcp" portid="13321"><state state="closed" reason="reset" reason_ttl="128"/></port>
+</ports>
+<times srtt="20428" rttvar="5367" to="100000"/>
+</host>
+<runstats><finished time="1567025485" timestr="Wed Aug 28 23:51:25 2019" elapsed="111.52" summary="Nmap done at Wed Aug 28 23:51:25 2019; 1 IP address (1 host up) scanned in 111.52 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Tue Aug 20 21:59:03 2019 as: nmap -sC -sV -p 10443 --script vuln -oA nmap/targetedPort 10.11.1.234
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for core.thinc.local (10.11.1.234)
+Host is up (0.017s latency).
+
+PORT      STATE SERVICE VERSION
+10443/tcp open  http    CoreHTTP httpd 0.5.3.1
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|_  /dev/: Potentially interesting folder w/ directory listing
+|_http-server-header: corehttp-0.5.3.1
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+MAC Address: 00:50:56:B8:AC:94 (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Aug 20 22:01:27 2019 -- 1 IP address (1 host up) scanned in 143.76 seconds

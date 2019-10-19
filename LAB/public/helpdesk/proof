@@ -1,0 +1,8 @@
+administrator administrator
+----------------------------
+Hash = 26a32e4685b80a2af292db96708b46e5
+
+
+The admin left the default creds to the mgmt page making the system vulnrable while I got in.
+I used the exploit as my way to get a coplete shell. 
+exploit = multi/http/manageengine_auth_upload

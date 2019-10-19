@@ -1,0 +1,24 @@
+# Nmap 7.80 scan initiated Tue Aug 27 13:50:25 2019 as: nmap -sV -p 1-65535 -oA nmap/jeff 10.11.1.223
+Nmap scan report for 10.11.1.223
+Host is up (0.017s latency).
+Not shown: 65522 closed ports
+PORT      STATE SERVICE            VERSION
+80/tcp    open  http               Apache httpd 2.2.14 (DAV/2 mod_ssl/2.2.14 OpenSSL/0.9.8l mod_autoindex_color PHP/5.3.1 mod_apreq2-20090110/2.7.1 mod_perl/2.0.4 Perl/v5.10.1)
+135/tcp   open  msrpc              Microsoft Windows RPC
+139/tcp   open  netbios-ssn        Microsoft Windows netbios-ssn
+443/tcp   open  ssl/https?
+445/tcp   open  microsoft-ds       Microsoft Windows Server 2008 R2 microsoft-ds (workgroup: WORKGROUP)
+3306/tcp  open  mysql?
+3389/tcp  open  ssl/ms-wbt-server?
+49152/tcp open  msrpc              Microsoft Windows RPC
+49153/tcp open  msrpc              Microsoft Windows RPC
+49154/tcp open  msrpc              Microsoft Windows RPC
+49155/tcp open  msrpc              Microsoft Windows RPC
+49156/tcp open  msrpc              Microsoft Windows RPC
+49157/tcp open  msrpc              Microsoft Windows RPC
+MAC Address: 00:50:56:B8:72:7E (VMware)
+Service Info: Hosts: localhost, JEFF; OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Tue Aug 27 13:53:52 2019 -- 1 IP address (1 host up) scanned in 207.25 seconds

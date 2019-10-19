@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<cherrytree>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="gamma" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1565624898.73" ts_lastsave="1565624903.57" unique_id="1">
+		<rich_text></rich_text>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="smbtree" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1565624903.57" ts_lastsave="1565624903.57" unique_id="2">
+			<rich_text></rich_text>
+		</node>
+	</node>
+</cherrytree>

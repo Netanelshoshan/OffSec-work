@@ -1,0 +1,14 @@
+# Nmap 7.80 scan initiated Wed Aug 28 23:49:33 2019 as: nmap -sV -p 1-65535 -oA nmap/allports 10.11.1.13
+Nmap scan report for 10.11.1.13
+Host is up (0.020s latency).
+Not shown: 65531 filtered ports
+PORT      STATE  SERVICE    VERSION
+21/tcp    open   ftp        Microsoft ftpd
+80/tcp    open   http       Microsoft IIS httpd 5.1
+3389/tcp  open   tcpwrapped
+13321/tcp closed unknown
+MAC Address: 00:50:56:B8:E9:2E (VMware)
+Service Info: OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 28 23:51:25 2019 -- 1 IP address (1 host up) scanned in 111.52 seconds

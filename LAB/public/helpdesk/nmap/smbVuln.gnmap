@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Aug 17 15:17:18 2019 as: nmap -p139,445 --script smb-enum* -oA nmap/smbVuln 10.11.1.145
+Host: 10.11.1.145 (helpdesk.thinc.local)	Status: Up
+Host: 10.11.1.145 (helpdesk.thinc.local)	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///
+# Nmap done at Sat Aug 17 15:17:35 2019 -- 1 IP address (1 host up) scanned in 16.20 seconds

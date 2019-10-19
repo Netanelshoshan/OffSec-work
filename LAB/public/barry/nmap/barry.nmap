@@ -1,0 +1,45 @@
+# Nmap 7.70 scan initiated Wed Aug 14 17:10:18 2019 as: nmap -sC -sV -oA nmap/barry 10.11.1.22
+Nmap scan report for 10.11.1.22
+Host is up (0.019s latency).
+Scanned at 2019-08-14 17:10:19 IDT for 190s
+Not shown: 993 closed ports
+PORT      STATE SERVICE    VERSION
+21/tcp    open  ftp?
+22/tcp    open  ssh        OpenSSH 3.1p1 (protocol 1.99)
+| ssh-hostkey: 
+|   1024 4a:e3:f8:07:d5:d6:b1:b5:bf:54:ac:e7:17:36:7e:e8 (RSA1)
+| 1024 35 158024031730453311694945425651710866694539243733141124848477553470768919913354236584791061833801033743119988890479285306809814711623902633890306598566557665145121550035695813450437760509479929974007415829491821787149369214314439099107671480716712322534353002462963692459200779561497741328455191217993087307621
+|   1024 77:67:f2:2c:3d:7c:45:24:fe:5e:0f:de:07:65:b3:57 (DSA)
+| ssh-dss AAAAB3NzaC1kc3MAAACBAMi53wEyZunWxwUAJ9meBlH1psMJvRb2Ib59F5DmeemIEGH2b/8wCop428C+qa2ENvQxVYDx0XYX39use5GOnDZoMSLquPytS1E/+4pRWHf6yRhF9VIbnPVsVDB02wwGNd917H4wDk56mzN5CGLSDHrGEoV4zM8jB5edkQQaKFZrAAAAFQCWO2hMkNJq8G3/7zDwfzLQzblx9QAAAIA+RZSfKPjwuAvNx3/uh0w2r4mClRzKqtsnXTKcgSWDLKlCCYqMzgSeZ7sbwR3eSO4TiY8VaQ711h8Jiakv1gvwNvWhWEbjj/tq1cTwbgAN0nFYBB3/PkW+PlQQmQcGcEOksmEFLmwVRQoaZc7aezcTlw7Y8Tlc9jMKqPhKyIb1rAAAAIEAvTNWaCQ4Em1exNwDSMQ4ns+rDCRw7uTjLlEpYoF10xsva7PUuNNTxjZ6kZQwJ3qLefiEt3xC/H50jGO91Y1sQSxYLuy3vL4xKd/YL7RpMYWUrL2/T8n5I8fQB9rNNMOZueil3FT4Y54rGM0jgWbqT0sqFmMseulGvJend271Co0=
+|   1024 42:b1:48:0b:41:f8:a9:12:cc:9b:c4:ed:26:74:64:2c (RSA)
+|_ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAIEAyTHcnHjN1XtoaHl9uTw+YrXkktWupM2TatPzOGHh02gNR049jrMsd7coNkMeNc0x67+j+IqiFAAunCuT7jfmDD/c54nzhEFnH3j/NmoCLu9zVhXfCF4OhkXPvfo0Df9Fo2s3MF3ncJGnLuH25KkedtzlSQKZnHHKpJnJLCGAf0k=
+|_sshv1: Server supports SSHv1
+23/tcp    open  telnet?
+111/tcp   open  rpcbind    2 (RPC #100000)
+| rpcinfo: 
+|   program version   port/proto  service
+|   100000  2            111/tcp  rpcbind
+|   100000  2            111/udp  rpcbind
+|   100024  1          32768/tcp  status
+|_  100024  1          32768/udp  status
+199/tcp   open  smux       Linux SNMP multiplexer
+995/tcp   open  ssl/pop3s?
+|_ssl-date: 2019-08-14T14:05:29+00:00; -7m27s from scanner time.
+| sslv2: 
+|   SSLv2 supported
+|   ciphers: 
+|     SSL2_RC2_128_CBC_EXPORT40_WITH_MD5
+|     SSL2_RC2_128_CBC_WITH_MD5
+|     SSL2_RC4_128_EXPORT40_WITH_MD5
+|     SSL2_RC4_128_WITH_MD5
+|_    SSL2_DES_192_EDE3_CBC_WITH_MD5
+32768/tcp open  status     1 (RPC #100024)
+MAC Address: 00:50:56:B8:02:B1 (VMware)
+Service Info: OS: Linux; CPE: cpe:/o:linux:linux_kernel
+
+Host script results:
+|_clock-skew: mean: -7m27s, deviation: 0s, median: -7m27s
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 14 17:13:29 2019 -- 1 IP address (1 host up) scanned in 191.04 seconds

@@ -1,0 +1,5 @@
+# fw_it 10.11.1.251 
+
+# nmap scan revealed ports 22,80.
+# did some directory brute-force with gobuster and found that the host was running wordpress on port 80. 
+# found the "readme.html" file under the "/wp/" directory and found that the version was 2.8.6 .

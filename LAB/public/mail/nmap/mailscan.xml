@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Sat Aug 24 11:44:48 2019 as: nmap -p 25,110,143 -&#45;script vuln -sV -oA boxes/mail/nmap/mailscan 10.11.1.229 -->
+<nmaprun scanner="nmap" args="nmap -p 25,110,143 -&#45;script vuln -sV -oA boxes/mail/nmap/mailscan 10.11.1.229" start="1566636288" startstr="Sat Aug 24 11:44:48 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="3" services="25,110,143"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1566636322" endtime="1566636336"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.229" addrtype="ipv4"/>
+<address addr="00:50:56:B8:8D:74" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="mail.thinc.local" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="25"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="smtp" product="hMailServer smtpd" hostname="MAIL" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="smtp-vuln-cve2010-4344" output="&#xa;  The SMTP server is not Exim: NOT VULNERABLE&#xa;"/><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="110"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="pop3" product="hMailServer pop3d" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="sslv2-drown" output="&#xa;"></script></port>
+<port protocol="tcp" portid="143"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="imap" product="hMailServer imapd" ostype="Windows" method="probed" conf="10"><cpe>cpe:/o:microsoft:windows</cpe></service><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<times srtt="14927" rttvar="6325" to="100000"/>
+</host>
+<runstats><finished time="1566636336" timestr="Sat Aug 24 11:45:36 2019" elapsed="48.70" summary="Nmap done at Sat Aug 24 11:45:36 2019; 1 IP address (1 host up) scanned in 48.70 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

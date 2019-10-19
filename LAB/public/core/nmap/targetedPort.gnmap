@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Aug 20 21:59:03 2019 as: nmap -sC -sV -p 10443 --script vuln -oA nmap/targetedPort 10.11.1.234
+Host: 10.11.1.234 (core.thinc.local)	Status: Up
+Host: 10.11.1.234 (core.thinc.local)	Ports: 10443/open/tcp//http//CoreHTTP httpd 0.5.3.1/
+# Nmap done at Tue Aug 20 22:01:27 2019 -- 1 IP address (1 host up) scanned in 143.76 seconds

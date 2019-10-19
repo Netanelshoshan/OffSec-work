@@ -1,0 +1,25 @@
+# Nmap 7.80 scan initiated Sun Aug 25 11:36:28 2019 as: nmap -sS -v -v -Pn -sV -g 88 -oA nmap/sp88 10.11.1.229
+Nmap scan report for mail.thinc.local (10.11.1.229)
+Host is up, received arp-response (0.015s latency).
+Scanned at 2019-08-25 11:36:28 IDT for 20s
+Not shown: 988 filtered ports
+Reason: 988 no-responses
+PORT     STATE  SERVICE       REASON          VERSION
+21/tcp   open   tcpwrapped    syn-ack ttl 128
+23/tcp   closed telnet        reset ttl 128
+25/tcp   open   smtp          syn-ack ttl 128 hMailServer smtpd
+80/tcp   open   http          syn-ack ttl 128 Microsoft IIS httpd 6.0
+110/tcp  open   pop3          syn-ack ttl 128 hMailServer pop3d
+135/tcp  open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+139/tcp  open   netbios-ssn   syn-ack ttl 128 Microsoft Windows netbios-ssn
+143/tcp  open   imap          syn-ack ttl 128 hMailServer imapd
+443/tcp  closed https         reset ttl 128
+1025/tcp open   msrpc         syn-ack ttl 128 Microsoft Windows RPC
+2869/tcp closed icslap        reset ttl 128
+3389/tcp open   ms-wbt-server syn-ack ttl 128 Microsoft Terminal Service
+MAC Address: 00:50:56:B8:8D:74 (VMware)
+Service Info: Host: MAIL; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Read data files from: /usr/bin/../share/nmap
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sun Aug 25 11:36:48 2019 -- 1 IP address (1 host up) scanned in 20.00 seconds

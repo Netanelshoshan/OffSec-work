@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.70 scan initiated Wed Aug 21 18:59:23 2019 as: nmap -sC -sV -p80 -&#45;script vuln -oA nmap/port80 10.11.1.234 -->
+<nmaprun scanner="nmap" args="nmap -sC -sV -p80 -&#45;script vuln -oA nmap/port80 10.11.1.234" start="1566403163" startstr="Wed Aug 21 18:59:23 2019" version="7.70" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="1" services="80"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1566403197" endtime="1566403248"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.234" addrtype="ipv4"/>
+<address addr="00:50:56:B8:AC:94" addrtype="mac" vendor="VMware"/>
+<hostnames>
+<hostname name="core.thinc.local" type="PTR"/>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="64"/><service name="http" product="Apache httpd" version="2.2.14" extrainfo="(Ubuntu)" method="probed" conf="10"><cpe>cpe:/a:apache:http_server:2.2.14</cpe></service><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=core.thinc.local&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://core.thinc.local:80/&#xa;    Form id: searchform&#xa;    Form action: http://10.11.1.234/&#xa;"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /wp-login.php: Possible admin folder&#xa;  /readme.html: Wordpress version: 2 &#xa;  /wp-includes/images/rss.png: Wordpress version 2.2 found.&#xa;  /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.&#xa;  /wp-includes/images/blank.gif: Wordpress version 2.6 found.&#xa;  /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.&#xa;  /wp-login.php: Wordpress login page.&#xa;  /wp-admin/upgrade.php: Wordpress login page.&#xa;  /readme.html: WordPress version 3.3.1&#xa;  /icons/: Potentially interesting folder w/ directory listing&#xa;  /index/: Potentially interesting folder&#xa;"/><script id="http-server-header" output="Apache/2.2.14 (Ubuntu)"><elem>Apache/2.2.14 (Ubuntu)</elem>
+</script><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/></port>
+</ports>
+<times srtt="14190" rttvar="10653" to="100000"/>
+</host>
+<runstats><finished time="1566403248" timestr="Wed Aug 21 19:00:48 2019" elapsed="85.15" summary="Nmap done at Wed Aug 21 19:00:48 2019; 1 IP address (1 host up) scanned in 85.15 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

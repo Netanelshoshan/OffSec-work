@@ -1,0 +1,7 @@
+- found that only port 80 is open.
+- I ran a vuln scan on port 80 with nmap and found a Coldfusion8 Vulnerabillity .
+- Dumped the hash that I found for the Admin consule (SHA1) and the password was "pass123".
+- Used scedulled task to upload my .jsp shell that I created with msfvenom to the webdirectory.
+- Fired up nc and ran the address that the shell was uploaded to .
+- Was allready at sys privs .. so I'm done bitch. 
+---HaSh = a416a831fddf36aa8c01ba0674ca7bf8

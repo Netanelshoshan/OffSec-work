@@ -1,0 +1,38 @@
+# Nmap 7.70 scan initiated Wed Aug 21 18:59:23 2019 as: nmap -sC -sV -p80 --script vuln -oA nmap/port80 10.11.1.234
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for core.thinc.local (10.11.1.234)
+Host is up (0.014s latency).
+
+PORT   STATE SERVICE VERSION
+80/tcp open  http    Apache httpd 2.2.14 ((Ubuntu))
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=core.thinc.local
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://core.thinc.local:80/
+|     Form id: searchform
+|_    Form action: http://10.11.1.234/
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /wp-login.php: Possible admin folder
+|   /readme.html: Wordpress version: 2 
+|   /wp-includes/images/rss.png: Wordpress version 2.2 found.
+|   /wp-includes/js/jquery/suggest.js: Wordpress version 2.5 found.
+|   /wp-includes/images/blank.gif: Wordpress version 2.6 found.
+|   /wp-includes/js/comment-reply.js: Wordpress version 2.7 found.
+|   /wp-login.php: Wordpress login page.
+|   /wp-admin/upgrade.php: Wordpress login page.
+|   /readme.html: WordPress version 3.3.1
+|   /icons/: Potentially interesting folder w/ directory listing
+|_  /index/: Potentially interesting folder
+|_http-server-header: Apache/2.2.14 (Ubuntu)
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+MAC Address: 00:50:56:B8:AC:94 (VMware)
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 21 19:00:48 2019 -- 1 IP address (1 host up) scanned in 85.15 seconds

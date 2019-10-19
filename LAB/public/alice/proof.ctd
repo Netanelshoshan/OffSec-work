@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<cherrytree>
+	<node custom_icon_id="0" foreground="" is_bold="False" name="10.11.1.5" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1564481524.16" ts_lastsave="1564481534.22" unique_id="1">
+		<rich_text></rich_text>
+		<node custom_icon_id="0" foreground="" is_bold="False" name="ssh findings" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1564481534.22" ts_lastsave="1564481537.25" unique_id="2">
+			<rich_text>ssh-rsa AAAAB3NzaC1yc2EAAAABIwAAAQEAzx6C2kxbb2qPx9eRyW072CYpMhpa2zAlzgdBcElRS49cvTJlDcjqvC8DlpZL9FplzcfpCmD2xisb0VdHUtG2iteYQG5WaxUEeHd4t9XRqA9zCU3QjKq4jIDoT1A54HYLoEBk/jTxjUbaczfoFSgcZEOivBIZEM6usJW4gDgbpok1UoxHfmn7rRs43rgBKxKMpFZyp0+MsDlvKMZUie6F0mY60E2YSlwoyLAJKi0q1/oWB5Kmd3YtP20LIsVqvmbX7zcMXwXgztff0Wxj1dps0x6i1StYx1l14sU84comlceyZjzeYpqMoL+4OtWt4goqTqpiQasnXfv2vhNvCQXQaQ== root@explorer
+</rich_text>
+			<node custom_icon_id="0" foreground="" is_bold="False" name="proof.txt" prog_lang="custom-colors" readonly="False" tags="" ts_creation="1564481987.89" ts_lastsave="1564915588.89" unique_id="3">
+				<rich_text>domain controller - thinc
+slave (IP: 10.11.1.221)  </rich_text>
+			</node>
+		</node>
+	</node>
+</cherrytree>

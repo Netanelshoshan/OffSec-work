@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Wed Aug 14 20:10:58 2019 as: nmap -sC -sV -p- --script vuln -oA nmap/VulnScanAllPorts 10.11.1.22
+Host: 10.11.1.22 ()	Status: Up
+Host: 10.11.1.22 ()	Ports: 21/open/tcp//ftp?///, 22/open/tcp//ssh//OpenSSH 3.1p1 (protocol 1.99)/, 23/open/tcp//telnet?///, 25/open/tcp//smtp?///, 80/open/tcp//http//Apache httpd 1.3.23 ((Unix)  (Red-Hat|Linux) mod_python|2.7.6 Python|1.5.2 mod_ssl|2.8.7 OpenSSL|0.9.6b DAV|1.0.3 PHP|4.1.2 mod_perl|1.26 mod_throttle|3.1.2)/, 111/open/tcp//rpcbind//2 (RPC #100000)/, 139/open/tcp//netbios-ssn//Samba smbd (workgroup: vMYGROUP)/, 199/open/tcp//smux//Linux SNMP multiplexer/, 443/open/tcp//ssl|https//Apache|1.3.23 (Unix)  (Red-Hat|Linux) mod_python|2.7.6 Python|1.5.2 mod_ssl|2.8./, 995/open/tcp//ssl|pop3s?///, 32768/open/tcp//status//1 (RPC #100024)/	Ignored State: closed (65524)
+# Nmap done at Wed Aug 14 20:20:23 2019 -- 1 IP address (1 host up) scanned in 564.93 seconds

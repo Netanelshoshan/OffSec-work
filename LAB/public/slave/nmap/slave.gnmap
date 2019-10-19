@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Aug 17 11:17:36 2019 as: nmap -sC -sV -oA nmap/slave 10.11.1.221
+Host: 10.11.1.221 ()	Status: Up
+Host: 10.11.1.221 ()	Ports: 53/open/tcp//domain//Microsoft DNS 6.0.6001 (17714650) (Windows Server 2008 SP1)/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 3389/open/tcp//ssl|ms-wbt-server?///, 5357/open/tcp//http//Microsoft HTTPAPI httpd 2.0 (SSDP|UPnP)/, 49158/open/tcp//msrpc//Microsoft Windows RPC/	Ignored State: filtered (995)
+# Nmap done at Sat Aug 17 11:19:36 2019 -- 1 IP address (1 host up) scanned in 119.26 seconds

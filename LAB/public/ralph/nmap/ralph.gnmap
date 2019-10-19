@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Sat Aug 31 12:10:14 2019 as: nmap -sC -sV -oA nmap/ralph 10.11.1.31
+Host: 10.11.1.31 ()	Status: Up
+Host: 10.11.1.31 ()	Ports: 80/open/tcp//http//Microsoft IIS httpd 6.0/, 135/open/tcp//msrpc//Microsoft Windows RPC/, 139/open/tcp//netbios-ssn//Microsoft Windows netbios-ssn/, 445/open/tcp//microsoft-ds//Windows Server 2003 3790 Service Pack 1 microsoft-ds/, 1025/open/tcp//msrpc//Microsoft Windows RPC/, 1433/open/tcp//ms-sql-s//Microsoft SQL Server 2000 8.00.766.00; SP3a/, 3389/open/tcp//ms-wbt-server//Microsoft Terminal Service/	Ignored State: closed (993)
+# Nmap done at Sat Aug 31 12:12:17 2019 -- 1 IP address (1 host up) scanned in 122.87 seconds

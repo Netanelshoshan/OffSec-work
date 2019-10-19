@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Mon Aug 26 20:37:23 2019 as: nmap -sC -sV -oA nmap/edbmachine 10.11.1.219
+Host: 10.11.1.219 ()	Status: Up
+Host: 10.11.1.219 ()	Ports: 80/open/tcp//http//Apache httpd/	Ignored State: filtered (999)
+# Nmap done at Mon Aug 26 20:37:35 2019 -- 1 IP address (1 host up) scanned in 12.06 seconds

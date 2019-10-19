@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Fri Aug 30 22:08:28 2019 as: nmap -p 22,80,110,139,143,445,993,995 --script vuln -oA nmap/TargetedPorts 10.11.1.24
+Host: 10.11.1.24 ()	Status: Up
+Host: 10.11.1.24 ()	Ports: 22/open/tcp//ssh///, 80/open/tcp//http///, 110/open/tcp//pop3///, 139/open/tcp//netbios-ssn///, 143/open/tcp//imap///, 445/open/tcp//microsoft-ds///, 993/open/tcp//imaps///, 995/open/tcp//pop3s///
+# Nmap done at Fri Aug 30 22:14:24 2019 -- 1 IP address (1 host up) scanned in 355.92 seconds

@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Sat Aug 31 12:16:47 2019 as: nmap -p80,135,139,445,1025,1433,3389 --script vuln -oA nmap/TargetedPorts 10.11.1.31
+Host: 10.11.1.31 ()	Status: Up
+Host: 10.11.1.31 ()	Ports: 80/open/tcp//http///, 135/open/tcp//msrpc///, 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///, 1025/open/tcp//NFS-or-IIS///, 1433/open/tcp//ms-sql-s///, 3389/open/tcp//ms-wbt-server///
+# Nmap done at Sat Aug 31 12:19:51 2019 -- 1 IP address (1 host up) scanned in 184.81 seconds

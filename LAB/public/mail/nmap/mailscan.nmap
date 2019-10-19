@@ -1,0 +1,24 @@
+# Nmap 7.70 scan initiated Sat Aug 24 11:44:48 2019 as: nmap -p 25,110,143 --script vuln -sV -oA boxes/mail/nmap/mailscan 10.11.1.229
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for mail.thinc.local (10.11.1.229)
+Host is up (0.015s latency).
+
+PORT    STATE SERVICE VERSION
+25/tcp  open  smtp    hMailServer smtpd
+| smtp-vuln-cve2010-4344: 
+|_  The SMTP server is not Exim: NOT VULNERABLE
+|_sslv2-drown: 
+110/tcp open  pop3    hMailServer pop3d
+|_sslv2-drown: 
+143/tcp open  imap    hMailServer imapd
+|_sslv2-drown: 
+MAC Address: 00:50:56:B8:8D:74 (VMware)
+Service Info: Host: MAIL; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 24 11:45:36 2019 -- 1 IP address (1 host up) scanned in 48.70 seconds

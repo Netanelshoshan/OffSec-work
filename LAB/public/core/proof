@@ -1,0 +1,17 @@
+# Core.thinc.local ((10.11.1.234)) by Netanel Shoshan. 21.7.2019
+
+
+# Enumeration:
+# The first scan revealed ports 80,22 and after a deep scan found also a http port on 10443 but wasn't so helpful.
+# Found that the target use WordPress v3.5.1 , used cewl to generate a password file. 
+# Used Wpscan to found the correct Password for the admin page 'princess'.
+
+# Exploiting:
+# Used MSF module (wp_admin_shell_upload) to use the correct creds to gain a reverse shell.
+# The payload that I choose was a generic custom payload that was used to gain a <Reverse PHP shell> using nc.
+
+# Post-Exploitation:
+# Got dumb shell without tty and bearly interactive. Used python to import bash and then I fixed the tty.
+# I found that the kernel version that was running on the machine was vulnerable (2.6.32)
+
+hash =bb0891b0b337d60b84c514e07f311816

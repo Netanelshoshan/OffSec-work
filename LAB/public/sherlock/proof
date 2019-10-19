@@ -1,0 +1,5 @@
+# I've tried with trial and error to get info on the Admin directory.
+# I got the hash by using only the ftp commands.
+# Managed to get the hash by using the "recv" command.
+
+hash = dae9aad6636a1c2c330b435e5d1f8120

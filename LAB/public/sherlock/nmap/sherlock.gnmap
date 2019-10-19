@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Aug 20 18:50:47 2019 as: nmap -sV -p- -oA nmap/sherlock 10.11.1.125
+Host: 10.11.1.125 (sherlock.thinc.local)	Status: Up
+Host: 10.11.1.125 (sherlock.thinc.local)	Ports: 21/open/tcp//ftp//Acritum Femitter Server ftpd/, 123/open/tcp//ntp?///	Ignored State: filtered (65533)
+# Nmap done at Tue Aug 20 18:55:04 2019 -- 1 IP address (1 host up) scanned in 257.27 seconds

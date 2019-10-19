@@ -1,0 +1,31 @@
+# Nmap 7.70 scan initiated Thu Aug 22 17:07:02 2019 as: nmap -v -p 80 --script vuln -oA nmap/httpscan 10.11.1.229
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.11.1.229
+Host is up (0.013s latency).
+
+PORT   STATE SERVICE
+80/tcp open  http
+|_http-csrf: Couldn't find any CSRF vulnerabilities.
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /_vti_log/: Frontpage file or folder
+|   /_vti_pvt/access.cnf: Frontpage file or folder
+|   /_vti_pvt/bots.cnf: Frontpage file or folder
+|   /_vti_pvt/botinfs.cnf: Frontpage file or folder
+|   /_vti_pvt/service.cnf: Frontpage file or folder
+|   /_vti_pvt/services.cnf: Frontpage file or folder
+|   /_vti_pvt/svcacl.cnf: Frontpage file or folder
+|   /_vti_pvt/writeto.cnf: Frontpage file or folder
+|   /images/: Potentially interesting folder
+|_  /_private/: Potentially interesting folder
+|_http-iis-webdav-vuln: WebDAV is ENABLED. No protected folder found; check not run. If you know a protected folder, add --script-args=webdavfolder=<path>
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+MAC Address: 00:50:56:B8:8D:74 (VMware)
+
+Read data files from: /usr/bin/../share/nmap
+# Nmap done at Thu Aug 22 17:10:06 2019 -- 1 IP address (1 host up) scanned in 184.46 seconds

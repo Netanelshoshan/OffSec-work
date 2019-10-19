@@ -1,0 +1,98 @@
+# Nmap 7.80 scan initiated Sat Aug 31 12:16:47 2019 as: nmap -p80,135,139,445,1025,1433,3389 --script vuln -oA nmap/TargetedPorts 10.11.1.31
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.11.1.31
+Host is up (0.014s latency).
+
+PORT     STATE SERVICE
+80/tcp   open  http
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| http-cookie-flags: 
+|   /: 
+|     ASPSESSIONIDCSQQDQRA: 
+|_      httponly flag not set
+| http-csrf: 
+| Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.31
+|   Found the following possible CSRF vulnerabilities: 
+|     
+|     Path: http://10.11.1.31:80/
+|     Form id: 
+|_    Form action: login-off.asp
+|_http-dombased-xss: Couldn't find any DOM based XSS.
+| http-enum: 
+|   /_vti_log/: Frontpage file or folder
+|   /postinfo.html: Frontpage file or folder
+|   /_vti_pvt/access.cnf: Frontpage file or folder
+|   /_vti_pvt/bots.cnf: Frontpage file or folder
+|   /_vti_pvt/botinfs.cnf: Frontpage file or folder
+|   /_vti_pvt/service.cnf: Frontpage file or folder
+|   /_vti_pvt/services.cnf: Frontpage file or folder
+|   /_vti_pvt/svcacl.cnf: Frontpage file or folder
+|   /_vti_pvt/writeto.cnf: Frontpage file or folder
+|   /images/: Potentially interesting folder
+|_  /_private/: Potentially interesting folder
+|_http-stored-xss: Couldn't find any stored XSS vulnerabilities.
+135/tcp  open  msrpc
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+139/tcp  open  netbios-ssn
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+445/tcp  open  microsoft-ds
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+1025/tcp open  NFS-or-IIS
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+1433/tcp open  ms-sql-s
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+|_sslv2-drown: 
+|_tls-ticketbleed: ERROR: Script execution failed (use -d to debug)
+3389/tcp open  ms-wbt-server
+|_clamav-exec: ERROR: Script execution failed (use -d to debug)
+| rdp-vuln-ms12-020: 
+|   VULNERABLE:
+|   MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0152
+|     Risk factor: Medium  CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152
+|   
+|   MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2012-0002
+|     Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)
+|           Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.
+|           
+|     Disclosure date: 2012-03-13
+|     References:
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002
+|_      http://technet.microsoft.com/en-us/security/bulletin/ms12-020
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_sslv2-drown: 
+MAC Address: 00:50:56:B8:71:35 (VMware)
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_OBJECT_NAME_NOT_FOUND
+| smb-vuln-ms17-010: 
+|   VULNERABLE:
+|   Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)
+|     State: VULNERABLE
+|     IDs:  CVE:CVE-2017-0143
+|     Risk factor: HIGH
+|       A critical remote code execution vulnerability exists in Microsoft SMBv1
+|        servers (ms17-010).
+|           
+|     Disclosure date: 2017-03-14
+|     References:
+|       https://technet.microsoft.com/en-us/library/security/ms17-010.aspx
+|       https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143
+|_      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/
+
+# Nmap done at Sat Aug 31 12:19:51 2019 -- 1 IP address (1 host up) scanned in 184.81 seconds

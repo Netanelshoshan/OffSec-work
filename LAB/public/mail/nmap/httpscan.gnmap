@@ -1,0 +1,5 @@
+# Nmap 7.70 scan initiated Thu Aug 22 17:07:02 2019 as: nmap -v -p 80 --script vuln -oA nmap/httpscan 10.11.1.229
+# Ports scanned: TCP(1;80) UDP(0;) SCTP(0;) PROTOCOLS(0;)
+Host: 10.11.1.229 ()	Status: Up
+Host: 10.11.1.229 ()	Ports: 80/open/tcp//http///
+# Nmap done at Thu Aug 22 17:10:06 2019 -- 1 IP address (1 host up) scanned in 184.46 seconds

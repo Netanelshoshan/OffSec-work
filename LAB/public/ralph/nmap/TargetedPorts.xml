@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE nmaprun>
+<?xml-stylesheet href="file:///usr/bin/../share/nmap/nmap.xsl" type="text/xsl"?>
+<!-- Nmap 7.80 scan initiated Sat Aug 31 12:16:47 2019 as: nmap -p80,135,139,445,1025,1433,3389 -&#45;script vuln -oA nmap/TargetedPorts 10.11.1.31 -->
+<nmaprun scanner="nmap" args="nmap -p80,135,139,445,1025,1433,3389 -&#45;script vuln -oA nmap/TargetedPorts 10.11.1.31" start="1567243007" startstr="Sat Aug 31 12:16:47 2019" version="7.80" xmloutputversion="1.04">
+<scaninfo type="syn" protocol="tcp" numservices="7" services="80,135,139,445,1025,1433,3389"/>
+<verbose level="0"/>
+<debugging level="0"/>
+<prescript><script id="broadcast-avahi-dos" output="&#xa;  Discovered hosts:&#xa;    224.0.0.251&#xa;  After NULL UDP avahi packet DoS (CVE-2011-1002).&#xa;  Hosts are all up (not vulnerable).&#xa;"/></prescript><host starttime="1567243041" endtime="1567243191"><status state="up" reason="arp-response" reason_ttl="0"/>
+<address addr="10.11.1.31" addrtype="ipv4"/>
+<address addr="00:50:56:B8:71:35" addrtype="mac" vendor="VMware"/>
+<hostnames>
+</hostnames>
+<ports><port protocol="tcp" portid="80"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="http" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="http-cookie-flags" output="&#xa;  /: &#xa;    ASPSESSIONIDCSQQDQRA: &#xa;      httponly flag not set"><table key="/">
+<table key="ASPSESSIONIDCSQQDQRA">
+<elem>httponly flag not set</elem>
+</table>
+</table>
+</script><script id="http-csrf" output="&#xa;Spidering limited to: maxdepth=3; maxpagecount=20; withinhost=10.11.1.31&#xa;  Found the following possible CSRF vulnerabilities: &#xa;    &#xa;    Path: http://10.11.1.31:80/&#xa;    Form id: &#xa;    Form action: login-off.asp&#xa;"/><script id="http-dombased-xss" output="Couldn&apos;t find any DOM based XSS."/><script id="http-enum" output="&#xa;  /_vti_log/: Frontpage file or folder&#xa;  /postinfo.html: Frontpage file or folder&#xa;  /_vti_pvt/access.cnf: Frontpage file or folder&#xa;  /_vti_pvt/bots.cnf: Frontpage file or folder&#xa;  /_vti_pvt/botinfs.cnf: Frontpage file or folder&#xa;  /_vti_pvt/service.cnf: Frontpage file or folder&#xa;  /_vti_pvt/services.cnf: Frontpage file or folder&#xa;  /_vti_pvt/svcacl.cnf: Frontpage file or folder&#xa;  /_vti_pvt/writeto.cnf: Frontpage file or folder&#xa;  /images/: Potentially interesting folder&#xa;  /_private/: Potentially interesting folder&#xa;"/><script id="http-stored-xss" output="Couldn&apos;t find any stored XSS vulnerabilities."/></port>
+<port protocol="tcp" portid="135"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="msrpc" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="139"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="netbios-ssn" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="445"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="microsoft-ds" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="1025"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="NFS-or-IIS" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="1433"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ms-sql-s" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="sslv2-drown" output="&#xa;"></script><script id="tls-ticketbleed" output="ERROR: Script execution failed (use -d to debug)"/></port>
+<port protocol="tcp" portid="3389"><state state="open" reason="syn-ack" reason_ttl="128"/><service name="ms-wbt-server" method="table" conf="3"/><script id="clamav-exec" output="ERROR: Script execution failed (use -d to debug)"/><script id="rdp-vuln-ms12-020" output="&#xa;  VULNERABLE:&#xa;  MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2012-0152&#xa;    Risk factor: Medium  CVSSv2: 4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)&#xa;          Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.&#xa;          &#xa;    Disclosure date: 2012-03-13&#xa;    References:&#xa;      http://technet.microsoft.com/en-us/security/bulletin/ms12-020&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152&#xa;  &#xa;  MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2012-0002&#xa;    Risk factor: High  CVSSv2: 9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)&#xa;          Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.&#xa;          &#xa;    Disclosure date: 2012-03-13&#xa;    References:&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002&#xa;      http://technet.microsoft.com/en-us/security/bulletin/ms12-020&#xa;"><table key="CVE-2012-0152">
+<elem key="title">MS12-020 Remote Desktop Protocol Denial Of Service Vulnerability</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2012-0152</elem>
+</table>
+<table key="scores">
+<elem key="CVSSv2">4.3 (MEDIUM) (AV:N/AC:M/Au:N/C:N/I:N/A:P)</elem>
+</table>
+<table key="description">
+<elem>    Remote Desktop Protocol vulnerability that could allow remote attackers to cause a denial of service.&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">13</elem>
+<elem key="month">03</elem>
+<elem key="year">2012</elem>
+</table>
+</table>
+<elem key="disclosure">2012-03-13</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>http://technet.microsoft.com/en-us/security/bulletin/ms12-020</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0152</elem>
+</table>
+</table>
+<table key="CVE-2012-0002">
+<elem key="title">MS12-020 Remote Desktop Protocol Remote Code Execution Vulnerability</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2012-0002</elem>
+</table>
+<table key="scores">
+<elem key="CVSSv2">9.3 (HIGH) (AV:N/AC:M/Au:N/C:C/I:C/A:C)</elem>
+</table>
+<table key="description">
+<elem>    Remote Desktop Protocol vulnerability that could allow remote attackers to execute arbitrary code on the targeted system.&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">13</elem>
+<elem key="month">03</elem>
+<elem key="year">2012</elem>
+</table>
+</table>
+<elem key="disclosure">2012-03-13</elem>
+<table key="exploit_results">
+</table>
+<table key="refs">
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2012-0002</elem>
+<elem>http://technet.microsoft.com/en-us/security/bulletin/ms12-020</elem>
+</table>
+</table>
+</script><script id="ssl-ccs-injection" output="No reply from server (TIMEOUT)"/><script id="sslv2-drown" output="&#xa;"></script></port>
+</ports>
+<hostscript><script id="smb-vuln-ms10-054" output="false">false</script><script id="smb-vuln-ms10-061" output="NT_STATUS_OBJECT_NAME_NOT_FOUND">false</script><script id="smb-vuln-ms17-010" output="&#xa;  VULNERABLE:&#xa;  Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)&#xa;    State: VULNERABLE&#xa;    IDs:  CVE:CVE-2017-0143&#xa;    Risk factor: HIGH&#xa;      A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa;       servers (ms17-010).&#xa;          &#xa;    Disclosure date: 2017-03-14&#xa;    References:&#xa;      https://technet.microsoft.com/en-us/library/security/ms17-010.aspx&#xa;      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143&#xa;      https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/&#xa;"><table key="CVE-2017-0143">
+<elem key="title">Remote Code Execution vulnerability in Microsoft SMBv1 servers (ms17-010)</elem>
+<elem key="state">VULNERABLE</elem>
+<table key="ids">
+<elem>CVE:CVE-2017-0143</elem>
+</table>
+<table key="description">
+<elem>A critical remote code execution vulnerability exists in Microsoft SMBv1&#xa; servers (ms17-010).&#xa;    </elem>
+</table>
+<table key="dates">
+<table key="disclosure">
+<elem key="day">14</elem>
+<elem key="month">03</elem>
+<elem key="year">2017</elem>
+</table>
+</table>
+<elem key="disclosure">2017-03-14</elem>
+<table key="refs">
+<elem>https://technet.microsoft.com/en-us/library/security/ms17-010.aspx</elem>
+<elem>https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-0143</elem>
+<elem>https://blogs.technet.microsoft.com/msrc/2017/05/12/customer-guidance-for-wannacrypt-attacks/</elem>
+</table>
+</table>
+</script></hostscript><times srtt="14026" rttvar="2132" to="100000"/>
+</host>
+<runstats><finished time="1567243191" timestr="Sat Aug 31 12:19:51 2019" elapsed="184.81" summary="Nmap done at Sat Aug 31 12:19:51 2019; 1 IP address (1 host up) scanned in 184.81 seconds" exit="success"/><hosts up="1" down="0" total="1"/>
+</runstats>
+</nmaprun>

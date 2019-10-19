@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Wed Aug 14 17:10:18 2019 as: nmap -sC -sV -oA nmap/barry 10.11.1.22
+Host: 10.11.1.22 ()	Status: Up
+Host: 10.11.1.22 ()	Ports: 21/open/tcp//ftp?///, 22/open/tcp//ssh//OpenSSH 3.1p1 (protocol 1.99)/, 23/open/tcp//telnet?///, 111/open/tcp//rpcbind//2 (RPC #100000)/, 199/open/tcp//smux//Linux SNMP multiplexer/, 995/open/tcp//ssl|pop3s?///, 32768/open/tcp//status//1 (RPC #100024)/	Ignored State: closed (993)
+# Nmap done at Wed Aug 14 17:13:29 2019 -- 1 IP address (1 host up) scanned in 191.04 seconds

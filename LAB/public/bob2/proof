@@ -1,0 +1,9 @@
+# bob + bob2 10.11.1.13/10.11.1.14 by Netnael Shoshan.
+
+- Found that ports 80,21,3389 was open.
+- Did some digging and found that the web server was had iis vulnrabillity ".asp upload" so i used it to gain a low priv shell.
+- For privesc I didn't find anything that will work on the winXP SP1 .. except for the "upnphost" service that I mitigated to gain my system 
+-- privilages by setting the bin path to the service to execute "netcat" that was uploaded with the ftp server that was also vulnerable to anonymous loggin
+-- and got a reverse shell with system privilages.
+
+hash -->  a26f37da4583ff68f44d133d12ae3459 

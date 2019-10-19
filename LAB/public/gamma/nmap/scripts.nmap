@@ -1,0 +1,357 @@
+# Nmap 7.70 scan initiated Wed Aug 14 08:55:05 2019 as: nmap -sV -oA nmap/scripts --script=safe 10.11.1.73
+Pre-scan script results:
+| broadcast-dns-service-discovery: 
+|   224.0.0.251
+|     52058/tcp companion-link
+|       rpHN=eedb6e418f6c
+|       rpFl=0x20000
+|       rpVr=174.23
+|       rpHA=616c071d64ab
+|       rpAD=9440782efab5
+|       rpHI=2512ba49a5c4
+|       rpBA=30:9E:55:BA:27:33
+|       model=MacBookPro14,3
+|       osxvers=18
+|       ecolor=157,157,160
+|_      Address=172.16.0.1
+| broadcast-listener: 
+|   ether
+|       ARP Request
+|         sender ip     sender mac         target ip
+|         10.11.1.50    00:50:56:B8:CE:DC  10.11.0.113
+|         10.11.1.252   00:50:56:B8:9A:C7  202.12.27.33
+|         10.11.1.220   00:50:56:B8:49:14  128.8.10.90
+|         10.11.1.251   00:50:56:B8:FB:B8  10.11.0.127
+|         10.11.1.221   00:50:56:B8:38:FE  10.11.1.73
+|         10.11.26.35   00:50:56:B8:05:C2  10.11.27.73
+|         10.11.1.202   00:50:56:B8:B0:3F  10.11.0.127
+|         10.11.25.124  00:50:56:B8:4B:50  10.11.25.220
+|         10.11.1.229   00:50:56:B8:8D:74  10.11.1.128
+|   udp
+|       Netbios
+|         Query
+|           ip           query
+|           10.11.1.227  
+|           10.11.1.128  
+|       Browser
+|         ip           src  dst
+|         10.11.1.218       
+|         10.11.1.128       
+|         10.11.1.229       
+|         10.11.1.145       
+|       LLMNR
+|         ip           query
+|         10.11.1.73   114.0.11.10.in-addr.arpa
+|_        10.11.27.73  offsec-lab
+| broadcast-ping: 
+|   IP: 10.11.1.115  MAC: 00:50:56:b8:64:e6
+|   IP: 10.11.1.141  MAC: 00:50:56:b8:2b:09
+|   IP: 172.16.0.2   MAC: 00:50:56:f7:e1:0a
+|   IP: 10.11.1.22   MAC: 00:50:56:b8:02:b1
+|   IP: 10.11.1.8    MAC: 00:50:56:b8:9e:64
+|   IP: 10.11.1.209  MAC: 00:50:56:b8:7a:47
+|_  Use --script-args=newtargets to add the results as targets
+|_eap-info: please specify an interface with -e
+| targets-asn: 
+|_  targets-asn.asn is a mandatory parameter
+Nmap scan report for 10.11.1.73
+Host is up (0.015s latency).
+Not shown: 980 filtered ports
+PORT      STATE SERVICE        VERSION
+135/tcp   open  msrpc          Microsoft Windows RPC
+139/tcp   open  netbios-ssn    Microsoft Windows netbios-ssn
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+445/tcp   open  microsoft-ds   Windows 7 Professional 7601 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+|_smb-enum-services: ERROR: Script execution failed (use -d to debug)
+554/tcp   open  rtsp?
+1100/tcp  open  java-rmi       Java RMI Registry
+| rmi-dumpregistry: 
+|   creamtec/ajaxswing/JVMFactory
+|     com.creamtec.ajaxswing.core.JVMFactory_Stub
+|     @10.11.1.73:49157
+|     extends
+|       java.rmi.server.RemoteStub
+|       extends
+|_        java.rmi.server.RemoteObject
+|_unusual-port: rmiregistry unexpected on port tcp/1100
+2869/tcp  open  http           Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-comments-displayer: Couldn't find any comments.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-traceroute: ERROR: Script execution failed (use -d to debug)
+| http-useragent-tester: 
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-xssed: No previously reported XSS vuln.
+|_unusual-port: http unexpected on port tcp/2869
+3306/tcp  open  mysql?
+|_mysql-info: ERROR: Script execution failed (use -d to debug)
+3389/tcp  open  ms-wbt-server?
+| rdp-enum-encryption: 
+|   Security layer
+|     CredSSP: SUCCESS
+|     Native RDP: SUCCESS
+|     SSL: SUCCESS
+|   RDP Encryption level: Client Compatible
+|     40-bit RC4: SUCCESS
+|     56-bit RC4: SUCCESS
+|     128-bit RC4: SUCCESS
+|_    FIPS 140-1: SUCCESS
+|_ssl-ccs-injection: No reply from server (TIMEOUT)
+|_ssl-date: 2019-08-14T05:48:00+00:00; -10m27s from scanner time.
+5357/tcp  open  http           Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-comments-displayer: Couldn't find any comments.
+|_http-date: Wed, 14 Aug 2019 05:47:57 GMT; -10m27s from local time.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Content-Type: text/html; charset=us-ascii
+|   Server: Microsoft-HTTPAPI/2.0
+|   Date: Wed, 14 Aug 2019 05:48:37 GMT
+|   Connection: close
+|   Content-Length: 326
+|   
+|_  (Request type: GET)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Service Unavailable
+| http-useragent-tester: 
+|   Status for browser useragent: 503
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-xssed: No previously reported XSS vuln.
+|_unusual-port: http unexpected on port tcp/5357
+5800/tcp  open  vnc-http       TightVNC (user: gamma; VNC TCP port: 5900)
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   
+|_  (Request type: GET)
+| http-slowloris-check: 
+|   VULNERABLE:
+|   Slowloris DOS attack
+|     State: LIKELY VULNERABLE
+|     IDs:  CVE:CVE-2007-6750
+|       Slowloris tries to keep many connections to the target web server open and hold
+|       them open as long as possible.  It accomplishes this by opening connections to
+|       the target web server and sending a partial request. By doing so, it starves
+|       the http server's resources causing Denial Of Service.
+|       
+|     Disclosure date: 2009-09-17
+|     References:
+|       http://ha.ckers.org/slowloris/
+|_      https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2007-6750
+|_http-title: TightVNC desktop [gamma]
+5900/tcp  open  vnc            VNC (protocol 3.8)
+|_banner: RFB 003.008
+| vnc-info: 
+|   Protocol version: 3.8
+|   Security types: 
+|     VNC Authentication (2)
+|     Tight (16)
+|   Tight auth subtypes: 
+|_    STDV VNCAUTH_ (2)
+8080/tcp  open  http           Apache httpd 2.4.9 ((Win32) PHP/5.5.12)
+|_http-comments-displayer: Couldn't find any comments.
+|_http-date: Wed, 14 Aug 2019 05:48:03 GMT; -10m27s from local time.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Date: Wed, 14 Aug 2019 05:48:04 GMT
+|   Server: Apache/2.4.9 (Win32) PHP/5.5.12
+|   X-Powered-By: PHP/5.5.12
+|   Connection: close
+|   Content-Type: text/html
+|   
+|_  (Request type: HEAD)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-open-proxy: Proxy might be redirecting requests
+|_http-php-version: Version from header x-powered-by: PHP/5.5.12
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+| http-robots.txt: 1 disallowed entry 
+|_/testmysql.php
+|_http-security-headers: 
+|_http-server-header: Apache/2.4.9 (Win32) PHP/5.5.12
+|_http-title: Site doesn't have a title (text/html).
+|_http-trace: TRACE is enabled
+| http-useragent-tester: 
+|   Status for browser useragent: 200
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-vuln-cve2017-1001000: ERROR: Script execution failed (use -d to debug)
+|_http-xssed: No previously reported XSS vuln.
+10243/tcp open  http           Microsoft HTTPAPI httpd 2.0 (SSDP/UPnP)
+|_http-comments-displayer: Couldn't find any comments.
+|_http-date: Wed, 14 Aug 2019 05:47:58 GMT; -10m27s from local time.
+|_http-fetch: Please enter the complete path of the directory to save data in.
+| http-headers: 
+|   Content-Type: text/html; charset=us-ascii
+|   Server: Microsoft-HTTPAPI/2.0
+|   Date: Wed, 14 Aug 2019 05:48:22 GMT
+|   Connection: close
+|   Content-Length: 315
+|   
+|_  (Request type: GET)
+|_http-mobileversion-checker: No mobile version detected.
+|_http-referer-checker: Couldn't find any cross-domain scripts.
+|_http-security-headers: 
+|_http-server-header: Microsoft-HTTPAPI/2.0
+|_http-title: Not Found
+| http-useragent-tester: 
+|   Status for browser useragent: 404
+|   Allowed User Agents: 
+|     Mozilla/5.0 (compatible; Nmap Scripting Engine; https://nmap.org/book/nse.html)
+|     libwww
+|     lwp-trivial
+|     libcurl-agent/1.0
+|     PHP/
+|     Python-urllib/2.5
+|     GT::WWW
+|     Snoopy
+|     MFC_Tear_Sample
+|     HTTP::Lite
+|     PHPCrawl
+|     URI::Fetch
+|     Zend_Http_Client
+|     http client
+|     PECL::HTTP
+|     Wget/1.13.4 (linux-gnu)
+|_    WWW-Mechanize/1.34
+|_http-xssed: No previously reported XSS vuln.
+49152/tcp open  msrpc          Microsoft Windows RPC
+49153/tcp open  msrpc          Microsoft Windows RPC
+49154/tcp open  msrpc          Microsoft Windows RPC
+49155/tcp open  msrpc          Microsoft Windows RPC
+49156/tcp open  msrpc          Microsoft Windows RPC
+49157/tcp open  rmiregistry    Java RMI
+49159/tcp open  rmiregistry    Java RMI
+MAC Address: 00:50:56:B8:2D:FB (VMware)
+Service Info: Host: GAMMA; OS: Windows; CPE: cpe:/o:microsoft:windows
+
+Host script results:
+|_clock-skew: mean: 49m33s, deviation: 2h38m46s, median: -10m27s
+| dns-blacklist: 
+|   PROXY
+|     tor.dan.me.uk - FAIL
+|     misc.dnsbl.sorbs.net - FAIL
+|_    dnsbl.tornevall.org - FAIL
+|_fcrdns: FAIL (No PTR record)
+|_ipidseq: Unknown
+|_msrpc-enum: NT_STATUS_ACCESS_DENIED
+|_nbstat: NetBIOS name: GAMMA, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b8:2d:fb (VMware)
+|_path-mtu: PMTU == 1500
+| qscan: 
+| PORT  FAMILY  MEAN (us)  STDDEV   LOSS (%)
+| 135   0       14653.80   3052.72  0.0%
+| 139   0       13641.10   210.95   0.0%
+| 445   0       13566.50   600.72   0.0%
+| 554   0       13749.44   350.63   10.0%
+| 1100  0       16618.90   4803.64  0.0%
+| 2869  0       13641.60   319.72   0.0%
+| 3306  0       13602.00   384.56   0.0%
+|_3389  0       14318.40   1943.17  0.0%
+|_smb-mbenum: Not a master or backup browser
+| smb-os-discovery: 
+|   OS: Windows 7 Professional 7601 Service Pack 1 (Windows 7 Professional 6.1)
+|   OS CPE: cpe:/o:microsoft:windows_7::sp1:professional
+|   Computer name: gamma
+|   NetBIOS computer name: GAMMA\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-08-13T22:48:00-07:00
+| smb-protocols: 
+|   dialects: 
+|     NT LM 0.12 (SMBv1) [dangerous, but default]
+|     2.02
+|_    2.10
+| smb-security-mode: 
+|   account_used: <blank>
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-capabilities: 
+|   2.02: 
+|     Distributed File System
+|   2.10: 
+|     Distributed File System
+|     Leasing
+|_    Multi-credit operations
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-08-14 08:48:22
+|_  start_date: 2018-10-23 05:15:55
+
+Post-scan script results:
+| reverse-index: 
+|   135/tcp: 10.11.1.73
+|   139/tcp: 10.11.1.73
+|   445/tcp: 10.11.1.73
+|   554/tcp: 10.11.1.73
+|   1100/tcp: 10.11.1.73
+|   2869/tcp: 10.11.1.73
+|   3306/tcp: 10.11.1.73
+|   3389/tcp: 10.11.1.73
+|   5357/tcp: 10.11.1.73
+|   5800/tcp: 10.11.1.73
+|   5900/tcp: 10.11.1.73
+|   8080/tcp: 10.11.1.73
+|   10243/tcp: 10.11.1.73
+|   49152/tcp: 10.11.1.73
+|   49153/tcp: 10.11.1.73
+|   49154/tcp: 10.11.1.73
+|   49155/tcp: 10.11.1.73
+|   49156/tcp: 10.11.1.73
+|   49157/tcp: 10.11.1.73
+|_  49159/tcp: 10.11.1.73
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Wed Aug 14 09:07:52 2019 -- 1 IP address (1 host up) scanned in 766.89 seconds

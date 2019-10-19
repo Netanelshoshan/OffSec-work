@@ -1,0 +1,44 @@
+# Nmap 7.70 scan initiated Sat Aug 17 14:58:30 2019 as: nmap -sC -sV -oA nmap/helpdesk 10.11.1.145
+Nmap scan report for helpdesk.thinc.local (10.11.1.145)
+Host is up (0.027s latency).
+Not shown: 995 filtered ports
+PORT     STATE SERVICE            VERSION
+135/tcp  open  msrpc              Microsoft Windows RPC
+139/tcp  open  netbios-ssn        Microsoft Windows netbios-ssn
+445/tcp  open  microsoft-ds       Windows Server (R) 2008 Standard 6001 Service Pack 1 microsoft-ds (workgroup: WORKGROUP)
+3389/tcp open  ssl/ms-wbt-server?
+|_ssl-date: 2019-08-17T11:44:42+00:00; -14m08s from scanner time.
+8080/tcp open  http               Apache Tomcat/Coyote JSP engine 1.1
+| http-cookie-flags: 
+|   /: 
+|     JSESSIONID: 
+|_      httponly flag not set
+|_http-server-header: Apache-Coyote/1.1
+|_http-title: ManageEngine ServiceDesk Plus
+MAC Address: 00:50:56:B8:70:7D (VMware)
+Service Info: Host: HELPDESK; OS: Windows; CPE: cpe:/o:microsoft:windows, cpe:/o:microsoft:windows_server_2008:r2
+
+Host script results:
+|_clock-skew: mean: 1h30m51s, deviation: 3h30m00s, median: -14m08s
+|_nbstat: NetBIOS name: HELPDESK, NetBIOS user: <unknown>, NetBIOS MAC: 00:50:56:b8:70:7d (VMware)
+| smb-os-discovery: 
+|   OS: Windows Server (R) 2008 Standard 6001 Service Pack 1 (Windows Server (R) 2008 Standard 6.0)
+|   OS CPE: cpe:/o:microsoft:windows_server_2008::sp1
+|   Computer name: HELPDESK
+|   NetBIOS computer name: HELPDESK\x00
+|   Workgroup: WORKGROUP\x00
+|_  System time: 2019-08-17T04:44:42-07:00
+| smb-security-mode: 
+|   account_used: guest
+|   authentication_level: user
+|   challenge_response: supported
+|_  message_signing: disabled (dangerous, but default)
+| smb2-security-mode: 
+|   2.02: 
+|_    Message signing enabled but not required
+| smb2-time: 
+|   date: 2019-08-17 14:44:42
+|_  start_date: 2017-01-16 10:46:36
+
+Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
+# Nmap done at Sat Aug 17 14:59:51 2019 -- 1 IP address (1 host up) scanned in 80.49 seconds

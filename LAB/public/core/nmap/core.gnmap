@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Tue Aug 20 20:36:04 2019 as: nmap -sC -sV -oA nmap/core 10.11.1.234
+Host: 10.11.1.234 (core.thinc.local)	Status: Up
+Host: 10.11.1.234 (core.thinc.local)	Ports: 22/open/tcp//ssh//OpenSSH 5.3p1 Debian 3ubuntu3 (Ubuntu Linux; protocol 2.0)/, 80/open/tcp//http//Apache httpd 2.2.14 ((Ubuntu))/	Ignored State: closed (998)
+# Nmap done at Tue Aug 20 20:36:17 2019 -- 1 IP address (1 host up) scanned in 12.92 seconds

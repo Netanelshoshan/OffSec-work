@@ -1,0 +1,4 @@
+# Nmap 7.70 scan initiated Sat Aug 24 11:44:48 2019 as: nmap -p 25,110,143 --script vuln -sV -oA boxes/mail/nmap/mailscan 10.11.1.229
+Host: 10.11.1.229 (mail.thinc.local)	Status: Up
+Host: 10.11.1.229 (mail.thinc.local)	Ports: 25/open/tcp//smtp//hMailServer smtpd/, 110/open/tcp//pop3//hMailServer pop3d/, 143/open/tcp//imap//hMailServer imapd/
+# Nmap done at Sat Aug 24 11:45:36 2019 -- 1 IP address (1 host up) scanned in 48.70 seconds

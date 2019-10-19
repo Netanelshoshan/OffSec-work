@@ -1,0 +1,4 @@
+# Nmap 7.80 scan initiated Tue Aug 27 14:00:38 2019 as: nmap -p 139,445 --script vuln -oA boxes/jeff/nmap/smbVulnScan 10.11.1.223
+Host: 10.11.1.223 ()	Status: Up
+Host: 10.11.1.223 ()	Ports: 139/open/tcp//netbios-ssn///, 445/open/tcp//microsoft-ds///
+# Nmap done at Tue Aug 27 14:01:19 2019 -- 1 IP address (1 host up) scanned in 40.84 seconds

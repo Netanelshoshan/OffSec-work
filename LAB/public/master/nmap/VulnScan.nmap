@@ -1,0 +1,60 @@
+# Nmap 7.70 scan initiated Sat Aug 17 10:55:10 2019 as: nmap --script vuln -oA nmap/VulnScan 10.11.1.220
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for 10.11.1.220
+Host is up (0.021s latency).
+Not shown: 980 closed ports
+PORT      STATE SERVICE
+21/tcp    open  ftp
+|_sslv2-drown: 
+53/tcp    open  domain
+88/tcp    open  kerberos-sec
+135/tcp   open  msrpc
+139/tcp   open  netbios-ssn
+389/tcp   open  ldap
+|_sslv2-drown: 
+445/tcp   open  microsoft-ds
+464/tcp   open  kpasswd5
+593/tcp   open  http-rpc-epmap
+636/tcp   open  ldapssl
+|_sslv2-drown: 
+3268/tcp  open  globalcatLDAP
+3269/tcp  open  globalcatLDAPssl
+|_sslv2-drown: 
+3389/tcp  open  ms-wbt-server
+| ssl-dh-params: 
+|   VULNERABLE:
+|   Diffie-Hellman Key Exchange Insufficient Group Strength
+|     State: VULNERABLE
+|       Transport Layer Security (TLS) services that use Diffie-Hellman groups
+|       of insufficient strength, especially those using one of a few commonly
+|       shared groups, may be susceptible to passive eavesdropping attacks.
+|     Check results:
+|       WEAK DH GROUP 1
+|             Cipher Suite: TLS_DHE_RSA_WITH_AES_256_CBC_SHA
+|             Modulus Type: Safe prime
+|             Modulus Source: RFC2409/Oakley Group 2
+|             Modulus Length: 1024
+|             Generator Length: 1024
+|             Public Key Length: 1024
+|     References:
+|_      https://weakdh.org
+|_sslv2-drown: 
+49152/tcp open  unknown
+49153/tcp open  unknown
+49154/tcp open  unknown
+49155/tcp open  unknown
+49157/tcp open  unknown
+49158/tcp open  unknown
+49165/tcp open  unknown
+MAC Address: 00:50:56:B8:49:14 (VMware)
+
+Host script results:
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+
+# Nmap done at Sat Aug 17 10:57:48 2019 -- 1 IP address (1 host up) scanned in 157.79 seconds

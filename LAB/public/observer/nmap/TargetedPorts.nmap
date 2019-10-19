@@ -1,0 +1,22 @@
+# Nmap 7.70 scan initiated Sun Aug 18 19:27:47 2019 as: nmap -p135,139,445 --script vuln -oA nmap/TargetedPorts 10.11.1.218
+Pre-scan script results:
+| broadcast-avahi-dos: 
+|   Discovered hosts:
+|     224.0.0.251
+|   After NULL UDP avahi packet DoS (CVE-2011-1002).
+|_  Hosts are all up (not vulnerable).
+Nmap scan report for observer.thinc.local (10.11.1.218)
+Host is up (0.015s latency).
+
+PORT    STATE SERVICE
+135/tcp open  msrpc
+139/tcp open  netbios-ssn
+445/tcp open  microsoft-ds
+MAC Address: 00:50:56:B8:30:E9 (VMware)
+
+Host script results:
+|_samba-vuln-cve-2012-1182: NT_STATUS_ACCESS_DENIED
+|_smb-vuln-ms10-054: false
+|_smb-vuln-ms10-061: NT_STATUS_ACCESS_DENIED
+
+# Nmap done at Sun Aug 18 19:28:27 2019 -- 1 IP address (1 host up) scanned in 39.73 seconds

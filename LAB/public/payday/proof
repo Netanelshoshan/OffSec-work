@@ -1,0 +1,10 @@
+# payday 10.11.1.24 by Netanel Shoshan
+- Found ports 22,80,110,139,143,445,993,995
+- On port 80 there was cs-cart on apache 2.2.4 with php 5.2.3. 
+- Ran gobuster on port 80 and found the admin page. Lazy admin left default creds.
+- Found vuln on the templates setting that let me upload my low priv reverse shell. (I used .phtml format to bypass the extension blacklist.)
+- Kernel was vuln to Dirty-COW privesc
+
+firefart pokpok86
+
+hashs = c19cf7756cfef80636d95d9e73ef4a2e
