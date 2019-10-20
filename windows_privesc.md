@@ -41,7 +41,8 @@ return 0;
 Compile the code above using the following command:
 ----
 i686-w64-mingw32-gcc -o scsiaccess.exe useradd.c
+
 --------------------------------------
+LOLBINS (Windows Version)
 
-
-
+https://lolbas-project.github.io/#
