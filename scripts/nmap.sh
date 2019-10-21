@@ -8,6 +8,7 @@ NC='\033[0m'
 SECONDS=0
 
 usage(){
+
 echo -e ""
 echo -e "${RED}Usage: $0 <TARGET-IP> <TYPE>"
 echo -e "${YELLOW}"
